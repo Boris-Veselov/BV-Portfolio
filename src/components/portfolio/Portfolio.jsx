@@ -5,7 +5,7 @@ export default function Portfolio() {
     <div className='portfolio' id='portfolio'>
       <h1>Portfolio</h1>
       <ul>
-        <li>Project 1</li>
+        <li className='active'>Project 1</li>
         <li>Project 2</li>
         <li>Project 3</li>
         <li>Project 4</li>

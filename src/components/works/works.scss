@@ -6,10 +6,20 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 
     .arrow {
         height: 50px;
         position: absolute;
+
+        &.left { 
+            left: 100px;
+            transform: rotateY(180deg);
+        }
+
+        &.right {
+            right: 100px;
+        }
     }
 
     .slider {

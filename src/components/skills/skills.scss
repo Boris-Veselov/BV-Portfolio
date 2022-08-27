@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .skills {
     background-color: white;
     display: flex;
@@ -6,6 +8,10 @@
 
     h1 {
         font-size: 50px;
+
+        @include mobile {
+            font-size: 20px;
+        }
     }
 
     .container {
@@ -15,8 +21,11 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-    
 
+        @include mobile {
+            flex-direction: column;
+        }
+    
         .card {
             width: 100px;
             height: 100px;
@@ -28,6 +37,10 @@
             padding: 20px;
             margin: auto;
             transition: all 1s ease;
+
+            @include mobile {
+                height: 50px;
+            }
 
             &.featured {
                

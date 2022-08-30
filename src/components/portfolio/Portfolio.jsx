@@ -73,16 +73,29 @@ import './portfolio.scss';
 export default function Portfolio() {
   return (
     <div className='portfolio' id='portfolio'>
-      <h1>Portfolio</h1>
-      <ul>
-        <li className='active'>full stack</li>
-        <li>front-end</li>
-        <li>back-end</li>
-      </ul>
+      <h1>Projects</h1>
       <div className='container'>
         <div className='item'>
           <img src='assets/wds.png' alt=''/>
-          <h3>web dev social</h3>
+          <h3><a href='https://guarded-atoll-65920.herokuapp.com/'>web dev social</a></h3>
+          
+        </div>
+        
+        <div className='item'>
+          <img src='assets/wds.png' alt=''/>
+          <h3>commit to eat</h3>
+        </div>
+        <div className='item'>
+          <img src='assets/wds.png' alt=''/>
+          <h3>randomizer</h3>
+        </div>
+        <div className='item'>
+          <img src='assets/wds.png' alt=''/>
+          <h3>weather dashboard</h3>
+        </div>
+        <div className='item'>
+          <img src='assets/wds.png' alt=''/>
+          <h3>run buddy</h3>
         </div>
       </div>
     </div>

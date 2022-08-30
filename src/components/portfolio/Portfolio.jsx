@@ -77,25 +77,23 @@ export default function Portfolio() {
       <div className='container'>
         <div className='item'>
           <img src='assets/wds.png' alt=''/>
-          <h3><a href='https://guarded-atoll-65920.herokuapp.com/'>web dev social</a></h3>
-          
-        </div>
-        
-        <div className='item'>
-          <img src='assets/wds.png' alt=''/>
-          <h3>commit to eat</h3>
+          <h3><a href='https://github.com/Boris-Veselov/web-dev-social'>web dev social</a></h3>
         </div>
         <div className='item'>
-          <img src='assets/wds.png' alt=''/>
-          <h3>randomizer</h3>
+          <img src='assets/eat.png' alt=''/>
+          <h3><a href='https://github.com/Boris-Veselov/commit-to-eat'>commit to eat</a></h3>
         </div>
         <div className='item'>
-          <img src='assets/wds.png' alt=''/>
-          <h3>weather dashboard</h3>
+          <img src='assets/random.png' alt=''/>
+          <h3><a href='https://github.com/Boris-Veselov/Randomizer'>randomizer</a></h3>
         </div>
         <div className='item'>
-          <img src='assets/wds.png' alt=''/>
-          <h3>run buddy</h3>
+          <img src='assets/weather.png' alt=''/>
+          <h3><a href='https://github.com/Boris-Veselov/weather-dashboard'>weather dashboard</a></h3>
+        </div>
+        <div className='item'>
+          <img src='assets/runbuddy.png' alt=''/>
+          <h3><a href='https://github.com/Boris-Veselov/run-buddy-website'>run buddy</a></h3>
         </div>
       </div>
     </div>

@@ -71,10 +71,11 @@ export default function Skills() {
           </div>
             ))}
         </div>
-        <div className='resume'>
+        <div className='resume' id='resume'>
         <a href='https://docs.google.com/document/d/1ZSjDF_P2qgoLla44_rwmi203Sxn94XRGYz-HOGs4ke0/edit?usp=sharing'
         class="link-btn">Download My Resume</a>
         </div>
     </div>
+    
   )
 }

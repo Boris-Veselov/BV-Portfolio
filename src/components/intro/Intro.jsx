@@ -5,7 +5,10 @@ export default function Intro() {
     <div className='intro' id='intro'>
       <div className='left'>
         <div className="imgContainer">
-          <img src='assets/head.png' alt=''/>
+        <a href='https://github.com/Boris-Veselov'>
+          <img src='assets/head.png' alt=''
+          width="450px" height="700px"/>
+          </a>
         </div>
       </div>
       <div className='right'>

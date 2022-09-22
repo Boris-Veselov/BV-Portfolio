@@ -6,23 +6,23 @@ export default function Portfolio() {
       <h1>Projects</h1>
       <div className='container'>
         <div className='item'>
-          <img src='./BV-Portfolio/assets/wds.png' alt=''/>
+          <img src='assets/wds.png' alt=''/>
           <h3><a href='https://github.com/Boris-Veselov/web-dev-social'>web dev social</a></h3>
         </div>
         <div className='item'>
-          <img src='./BV-Portfolio/assets/eat.png' alt=''/>
+          <img src='assets/eat.png' alt=''/>
           <h3><a href='https://github.com/Boris-Veselov/commit-to-eat'>commit to eat</a></h3>
         </div>
         <div className='item'>
-          <img src='./BV-Portfolio/assets/random.png' alt=''/>
+          <img src='assets/random.png' alt=''/>
           <h3><a href='https://github.com/Boris-Veselov/Randomizer'>randomizer</a></h3>
         </div>
         <div className='item'>
-          <img src='./BV-Portfolio/assets/weather.png' alt=''/>
+          <img src='assets/weather.png' alt=''/>
           <h3><a href='https://github.com/Boris-Veselov/weather-dashboard'>weather dashboard</a></h3>
         </div>
         <div className='item'>
-          <img src='./BV-Portfolio/assets/runbuddy.png' alt=''/>
+          <img src='assets/runbuddy.png' alt=''/>
           <h3><a href='https://github.com/Boris-Veselov/run-buddy-website'>run buddy</a></h3>
         </div>
       </div>

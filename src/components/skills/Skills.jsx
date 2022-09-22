@@ -4,43 +4,43 @@ export default function Skills() {
 
   const data = [
     {
-      icon: "./BV-Portfolio/assets/js.png"
+      icon: "assets/js.png"
     },
     {
-      icon: "./BV-Portfolio/assets/html.png",
+      icon: "assets/html.png",
       featured: true,
     },
     {
-      icon: "./BV-Portfolio/assets/css.png"
+      icon: "assets/css.png"
     },
     {
-      icon: "./BV-Portfolio/assets/react.png"
+      icon: "assets/react.png"
     },
     {
-      icon: "./BV-Portfolio/assets/nodejs.png",
+      icon: "assets/nodejs.png",
       featured: true,
     },
     {
-      icon: "./BV-Portfolio/assets/git.png"
+      icon: "assets/git.png"
     },
     {
-      icon: "./BV-Portfolio/assets/mysql.png"
+      icon: "assets/mysql.png"
     },
     {
-      icon: "./BV-Portfolio/assets/api.png",
+      icon: "assets/api.png",
       featured: true,
     },
     {
-      icon: "./BV-Portfolio/assets/bootstrap.png"
+      icon: "assets/bootstrap.png"
     },
     {
-      icon: "./BV-Portfolio/assets/handlebars.png"
+      icon: "assets/handlebars.png"
     },
     {
-      icon: "./BV-Portfolio/assets/adobe.png"
+      icon: "assets/adobe.png"
     },
     {
-      icon: "./BV-Portfolio/assets/mongoDB.png"
+      icon: "assets/mongoDB.png"
     },
   ];
 

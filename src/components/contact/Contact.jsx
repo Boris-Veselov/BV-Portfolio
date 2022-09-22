@@ -13,14 +13,14 @@ export default function Contact() {
   return (
     <div className='contact' id='contact'>
       <div className='left'>
-        <img src='assets/shake.svg' alt=''/>
+        <img src='./BV-Portfolio/assets/shake.svg' alt=''/>
       </div>
       <div className='right'>
         <h2>Contact</h2>
           <div className='links' id='links'>
-            <a href="https://github.com/Veselavalava"><img src="assets/github.png" alt='' style={{ padding: 10,height: 35 }} /></a>
-            <a href="mailto:borisveselov@yahoo.com"><img src="assets/mail.png" alt='' style={{ padding: 10, height: 35 }} /></a>
-            <a href="https://www.linkedin.com/in/veselavalava/"><img src="assets/linkedin.png" alt='' style={{ padding: 10,height: 35 }} /></a>
+            <a href="https://github.com/Veselavalava"><img src="./BV-Portfolio/assets/github.png" alt='' style={{ padding: 10,height: 35 }} /></a>
+            <a href="mailto:borisveselov@yahoo.com"><img src="./BV-Portfolio/assets/mail.png" alt='' style={{ padding: 10, height: 35 }} /></a>
+            <a href="https://www.linkedin.com/in/veselavalava/"><img src="./BV-Portfolio/assets/linkedin.png" alt='' style={{ padding: 10,height: 35 }} /></a>
           </div>
         <form onSubmit={handleSubmit}>
           <input type='text' placeholder='Email'/>

@@ -6,7 +6,7 @@ export default function Intro() {
       <div className='left'>
         <div className="imgContainer">
         <a href='https://github.com/Boris-Veselov'>
-          <img src='assets/head.png' alt=''
+          <img src='./BV-Portfolio/assets/head.png' alt=''
           width="450px" height="700px"/>
           </a>
         </div>
@@ -18,7 +18,7 @@ export default function Intro() {
           <h3>web developer / graphic designer<span></span></h3>
         </div>
         <a href='#portfolio'>
-          <img src='assets/down.png' alt=''/>
+          <img src='./BV-Portfolio/assets/down.png' alt=''/>
         </a>
       </div>
     </div>

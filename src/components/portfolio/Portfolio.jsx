@@ -7,7 +7,7 @@ export default function Portfolio() {
       <div className='container'>
         <div className='item'>
           <img src='assets/wds.png' alt=''/>
-          <h3><a href='https://github.com/Boris-Veselov/web-dev-social'>web dev social</a></h3>
+          <h3><a href='https://github.com/Boris-Veselov/web-dev-social'>web dev social gh</a><br></br><a href='https://guarded-atoll-65920.herokuapp.com/'>web dev social live</a></h3>
         </div>
         <div className='item'>
           <img src='assets/eat.png' alt=''/>

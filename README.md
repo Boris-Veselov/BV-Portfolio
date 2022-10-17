@@ -11,7 +11,7 @@ React Portfolio
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contribution](#contribution)
-* [license](#license)
+* [License](#license)
 * [Contact](#contact)
 
 ## Description
@@ -29,7 +29,7 @@ A website showcasing some of my work with links to github and different ways to 
 ## Preview
 <img width="1140" alt="Screen Shot 2022-09-21 at 8 19 57 AM" src="https://user-images.githubusercontent.com/96749114/191502069-7ac05549-93de-414c-af17-b782c420c8c2.png">
 
-## Website Link
+## Website-link
 
 https://boris-veselov.github.io/BV-Portfolio/
 

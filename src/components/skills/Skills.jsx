@@ -72,7 +72,7 @@ export default function Skills() {
             ))}
         </div>
         <div className='resume' id='resume'>
-        <a href='https://docs.google.com/document/d/1ZSjDF_P2qgoLla44_rwmi203Sxn94XRGYz-HOGs4ke0/edit?usp=sharing'
+        <a href='https://docs.google.https://docs.google.com/document/d/1VGxm-JXSPGf9y_a_XfTZLmTv0jzwYpDM/editcom/document/d/1ZSjDF_P2qgoLla44_rwmi203Sxn94XRGYz-HOGs4ke0/edit?usp=sharing'
         class="link-btn">Download My Resume</a>
         </div>
     </div>

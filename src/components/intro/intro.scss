@@ -1,10 +1,7 @@
 @import '../../global.scss';
 
 .intro {
-    background-color: $bgDark;
-    background-image:
-        radial-gradient(ellipse at 30% 50%, rgba(108, 99, 255, 0.07) 0%, transparent 60%),
-        radial-gradient(ellipse at 75% 20%, rgba(255, 107, 157, 0.04) 0%, transparent 50%);
+    background-color: white;
     display: flex;
 
     @include mobile {
@@ -15,30 +12,23 @@
     .left {
         flex: 0.5;
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         .imgContainer {
-            width: 460px;
-            height: 460px;
-            background: radial-gradient(circle, rgba(108, 99, 255, 0.12) 0%, transparent 70%);
+            width: 600px;
+            height: 500px;
+            background-color: white;
             border-radius: 50%;
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            position: relative;
+            float: right;
 
             @include mobile {
-                width: 240px;
-                height: 240px;
+                align-items: flex-start;
             }
 
             img {
                 height: 100%;
-                position: relative;
-                z-index: 1;
-                filter: drop-shadow(0 0 30px rgba(108, 99, 255, 0.25));
 
                 @include mobile {
                     height: 55%;
@@ -50,9 +40,6 @@
     .right {
         flex: 0.5;
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         .wrapper {
             width: 100%;
@@ -66,43 +53,37 @@
             @include mobile {
                 padding-left: 0;
                 align-items: center;
-                text-align: center;
             }
 
             h2 {
-                font-size: 20px;
-                font-weight: 400;
-                color: $textMuted;
+                font-size: 35px;
                 animation: fadeInUp 0.6s ease 0.1s both;
             }
 
             h1 {
-                font-size: 54px;
-                font-weight: 700;
-                margin: 4px 0;
-                color: $textPrimary;
+                font-size: 60px;
+                margin: 10px 0;
+                color: $accentColor;
                 animation: fadeInUp 0.6s ease 0.3s both;
 
                 @include mobile {
-                    font-size: 36px;
+                    font-size: 40px;
                 }
             }
 
             h3 {
-                font-size: 20px;
-                font-weight: 400;
-                color: $mainColor;
+                font-size: 30px;
                 animation: fadeInUp 0.6s ease 0.5s both;
 
                 @include mobile {
-                    font-size: 16px;
+                    font-size: 20px;
                 }
 
                 span {
                     display: inline-block;
                     width: 2px;
                     height: 1.1em;
-                    background: $accentColor;
+                    background: $mainColor;
                     margin-left: 2px;
                     vertical-align: middle;
                     animation: blink 1s step-end infinite;
@@ -117,8 +98,7 @@
             animation: fadeInUp 0.6s ease 0.8s both;
 
             img {
-                width: 28px;
-                filter: invert(1) opacity(0.35);
+                width: 30px;
                 animation: arrowBob 2s ease-in-out infinite;
             }
         }
@@ -126,8 +106,8 @@
 }
 
 @keyframes arrowBob {
-    0%, 100% { opacity: 0.35; transform: translateY(0); }
-    50%       { opacity: 0.7;  transform: translateY(7px); }
+    0%, 100% { opacity: 0.6; transform: translateY(0); }
+    50%       { opacity: 1;   transform: translateY(7px); }
 }
 
 @keyframes fadeInUp {

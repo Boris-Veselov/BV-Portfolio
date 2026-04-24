@@ -1,8 +1,7 @@
 @import '../../global.scss';
 
 .contact {
-    background-color: $bgSection;
-    background-image: radial-gradient(ellipse at 60% 80%, rgba(108, 99, 255, 0.06) 0%, transparent 50%);
+    background-color: white;
     display: flex;
 
     @include mobile {
@@ -18,12 +17,10 @@
         padding: 40px;
 
         img {
-            max-height: 65%;
-            opacity: 0.45;
-            filter: invert(1);
+            max-height: 70%;
 
             @include mobile {
-                max-height: 100px;
+                max-height: 120px;
             }
         }
     }
@@ -34,49 +31,45 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 14px;
-        padding: 40px 24px;
+        gap: 16px;
+        padding: 40px 20px;
+        color: $mainColor;
 
         h2 {
-            font-size: 34px;
+            font-size: 30px;
             font-weight: 700;
-            color: $textPrimary;
+            color: $mainColor;
         }
 
         .subtitle {
             font-size: 14px;
             color: $textMuted;
-            margin-top: -6px;
+            margin-top: -8px;
         }
 
         .socialLinks {
             display: flex;
-            gap: 12px;
+            gap: 8px;
             margin-bottom: 4px;
 
             a {
-                width: 42px;
-                height: 42px;
-                background: $bgCard;
-                border: 1px solid rgba(255, 255, 255, 0.08);
-                border-radius: 12px;
+                width: 40px;
+                height: 40px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                border-radius: 10px;
+                border: 1px solid #eee;
                 transition: all 0.2s ease;
 
                 img {
-                    height: 18px;
-                    filter: invert(0.55);
+                    height: 20px;
                 }
 
                 &:hover {
-                    border-color: rgba(108, 99, 255, 0.5);
+                    border-color: $mainColor;
                     transform: translateY(-2px);
-
-                    img {
-                        filter: invert(0.85);
-                    }
+                    box-shadow: 0 4px 10px rgba(98, 162, 162, 0.2);
                 }
             }
         }
@@ -89,14 +82,15 @@
             gap: 10px;
 
             .inputGroup {
-                border: 1px solid rgba(255, 255, 255, 0.08);
-                border-radius: 12px;
-                background: $bgCard;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                background: #fafafa;
                 transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
                 &.focused {
-                    border-color: rgba(108, 99, 255, 0.6);
-                    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+                    border-color: $mainColor;
+                    box-shadow: 0 0 0 3px rgba(98, 162, 162, 0.15);
+                    background: white;
                 }
 
                 input,
@@ -105,38 +99,38 @@
                     background: transparent;
                     border: none;
                     outline: none;
-                    padding: 13px 15px;
+                    padding: 12px 14px;
                     font-size: 14px;
                     color: $textPrimary;
                     font-family: inherit;
 
                     &::placeholder {
-                        color: $textMuted;
+                        color: #aaa;
                     }
                 }
 
                 textarea {
-                    height: 100px;
+                    height: 110px;
                     resize: none;
                     display: block;
                 }
             }
 
             button {
-                padding: 13px;
-                background: linear-gradient(135deg, $mainColor, $accentColor);
+                padding: 12px;
+                background-color: $accentColor;
                 color: white;
                 border: none;
-                border-radius: 12px;
+                border-radius: 10px;
                 font-size: 15px;
-                font-weight: 600;
+                font-weight: 500;
                 cursor: pointer;
                 transition: all 0.3s ease;
                 font-family: inherit;
 
                 &:hover {
+                    background-color: darken(rgb(211, 48, 48), 8%);
                     transform: translateY(-2px);
-                    box-shadow: 0 8px 24px rgba(108, 99, 255, 0.4);
                 }
 
                 &:active {
@@ -154,9 +148,9 @@
             padding: 32px;
 
             .checkmark {
-                width: 58px;
-                height: 58px;
-                background: linear-gradient(135deg, $mainColor, $accentColor);
+                width: 56px;
+                height: 56px;
+                background-color: $mainColor;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;

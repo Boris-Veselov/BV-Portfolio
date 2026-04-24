@@ -1,0 +1,126 @@
+@import '../../global.scss';
+
+.skills {
+    background-color: $bgDark;
+    background-image: radial-gradient(ellipse at 20% 60%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+    h1 {
+        font-size: 46px;
+        font-weight: 700;
+        color: $textPrimary;
+        margin-bottom: 16px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 3px;
+            background: linear-gradient(90deg, $cyanColor, $mainColor);
+            border-radius: 2px;
+        }
+
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+
+    .container {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 44px;
+
+        @include mobile {
+            width: 95%;
+            gap: 10px;
+        }
+
+        .skillCard {
+            width: 90px;
+            height: 90px;
+            background: $bgCard;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: default;
+
+            @include mobile {
+                width: 70px;
+                height: 70px;
+                gap: 4px;
+            }
+
+            img {
+                width: 36px;
+                height: 36px;
+                object-fit: contain;
+
+                @include mobile {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+
+            span {
+                font-size: 10px;
+                color: $textMuted;
+                text-align: center;
+                font-weight: 500;
+                letter-spacing: 0.2px;
+            }
+
+            &.featured {
+                border-color: rgba(108, 99, 255, 0.4);
+                background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), $bgCard);
+
+                span {
+                    color: $mainColor;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 24px rgba(108, 99, 255, 0.2);
+                border-color: rgba(108, 99, 255, 0.5);
+            }
+        }
+    }
+
+    .resumeLink {
+        margin-top: 32px;
+
+        .btn-resume {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, $mainColor, $accentColor);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(108, 99, 255, 0.4);
+            }
+        }
+    }
+}

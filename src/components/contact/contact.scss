@@ -1,0 +1,182 @@
+@import '../../global.scss';
+
+.contact {
+    background-color: $bgSection;
+    background-image: radial-gradient(ellipse at 60% 80%, rgba(108, 99, 255, 0.06) 0%, transparent 50%);
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .left {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+
+        img {
+            max-height: 65%;
+            opacity: 0.45;
+            filter: invert(1);
+
+            @include mobile {
+                max-height: 100px;
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding: 40px 24px;
+
+        h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: $textPrimary;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: $textMuted;
+            margin-top: -6px;
+        }
+
+        .socialLinks {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 4px;
+
+            a {
+                width: 42px;
+                height: 42px;
+                background: $bgCard;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s ease;
+
+                img {
+                    height: 18px;
+                    filter: invert(0.55);
+                }
+
+                &:hover {
+                    border-color: rgba(108, 99, 255, 0.5);
+                    transform: translateY(-2px);
+
+                    img {
+                        filter: invert(0.85);
+                    }
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .inputGroup {
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                background: $bgCard;
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+                &.focused {
+                    border-color: rgba(108, 99, 255, 0.6);
+                    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 13px 15px;
+                    font-size: 14px;
+                    color: $textPrimary;
+                    font-family: inherit;
+
+                    &::placeholder {
+                        color: $textMuted;
+                    }
+                }
+
+                textarea {
+                    height: 100px;
+                    resize: none;
+                    display: block;
+                }
+            }
+
+            button {
+                padding: 13px;
+                background: linear-gradient(135deg, $mainColor, $accentColor);
+                color: white;
+                border: none;
+                border-radius: 12px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-family: inherit;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 24px rgba(108, 99, 255, 0.4);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .successMsg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+            padding: 32px;
+
+            .checkmark {
+                width: 58px;
+                height: 58px;
+                background: linear-gradient(135deg, $mainColor, $accentColor);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 26px;
+                color: white;
+                animation: popIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            p {
+                color: $textMuted;
+                font-size: 15px;
+                max-width: 280px;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}

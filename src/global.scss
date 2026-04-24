@@ -1,0 +1,16 @@
+$mainColor: #6c63ff;
+$accentColor: #ff6b9d;
+$cyanColor: #00d4ff;
+$bgDark: #0d1117;
+$bgSection: #161b22;
+$bgCard: #21262d;
+$textPrimary: #e6edf3;
+$textMuted: #8b949e;
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+}

@@ -91,23 +91,7 @@
             }
         }
 
-        a {
-            position: absolute;
-            bottom: 10px;
-            left: 40%;
-            animation: fadeInUp 0.6s ease 0.8s both;
-
-            img {
-                width: 30px;
-                animation: arrowBob 2s ease-in-out infinite;
-            }
-        }
     }
-}
-
-@keyframes arrowBob {
-    0%, 100% { opacity: 0.6; transform: translateY(0); }
-    50%       { opacity: 1;   transform: translateY(7px); }
 }
 
 @keyframes fadeInUp {

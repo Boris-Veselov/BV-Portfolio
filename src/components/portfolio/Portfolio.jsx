@@ -30,6 +30,7 @@ const projects = [
     desc: 'A versatile randomization tool for picking teams, shuffling lists, or generating random numbers.',
     tags: ['JavaScript', 'HTML', 'CSS'],
     github: 'https://github.com/Boris-Veselov/Randomizer',
+    live: 'https://boris-veselov.github.io/Randomizer/',
   },
   {
     id: 4,
@@ -39,6 +40,7 @@ const projects = [
     desc: 'Real-time weather app showing current conditions and 5-day forecasts for any city, powered by the OpenWeather API.',
     tags: ['JavaScript', 'OpenWeather API', 'Local Storage'],
     github: 'https://github.com/Boris-Veselov/weather-dashboard',
+    live: 'https://boris-veselov.github.io/weather-dashboard/',
   },
   {
     id: 5,
@@ -48,6 +50,7 @@ const projects = [
     desc: 'A clean, fully responsive website for a fitness running-buddy service. Built with semantic HTML and modern CSS.',
     tags: ['HTML', 'CSS', 'Responsive Design'],
     github: 'https://github.com/Boris-Veselov/run-buddy-website',
+    live: 'https://boris-veselov.github.io/run-buddy-website/',
   },
 ];
 
@@ -62,23 +65,21 @@ export default function Portfolio() {
           <div
             key={p.id}
             className={`card card-${i + 1}`}
-            style={{ background: p.gradient }}
             onClick={() => setSelectedProject(p)}
           >
-            <img
-              src={p.img}
-              alt={p.title}
-              onError={e => { e.target.style.display = 'none'; }}
-            />
-            <div className='cardNum'>0{i + 1}</div>
-            <div className='cardInfo'>
+            <div className='cardImage' style={{ background: p.gradient }}>
+              <img
+                src={p.img}
+                alt={p.title}
+                onError={e => { e.target.style.display = 'none'; }}
+              />
+              <div className='cardNum'>0{i + 1}</div>
+            </div>
+            <div className='cardFooter'>
               <h3>{p.title}</h3>
               <div className='cardTags'>
                 {p.tags.slice(0, 2).map(tag => <span key={tag}>{tag}</span>)}
               </div>
-            </div>
-            <div className='cardOverlay'>
-              <span>View Details</span>
             </div>
           </div>
         ))}

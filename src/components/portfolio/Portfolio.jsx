@@ -79,6 +79,7 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
+      <img src='assets/projects.png' alt='' className='projectsImg' />
       {selectedProject && (
         <PortfolioModal item={selectedProject} onClose={() => setSelectedProject(null)} />
       )}

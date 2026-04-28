@@ -24,11 +24,7 @@
         }
 
         .combinedSection {
-            overflow-y: auto;
-            scrollbar-width: none;
-            &::-webkit-scrollbar {
-                display: none;
-            }
+            height: auto;
             > * {
                 width: 100%;
                 height: auto;

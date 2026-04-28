@@ -7,9 +7,6 @@ export default function PortfolioModal({ item, onClose }) {
     <div className='modalOverlay' onClick={onClose}>
       <div className='modalContent' onClick={e => e.stopPropagation()}>
         <button className='closeBtn' onClick={onClose}>×</button>
-        <div className='modalImage'>
-          <img src={item.img} alt={item.title} />
-        </div>
         <div className='modalBody'>
           <h2>{item.title}</h2>
           <p>{item.desc}</p>

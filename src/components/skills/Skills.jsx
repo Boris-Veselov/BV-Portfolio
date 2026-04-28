@@ -15,14 +15,9 @@ const skills = [
   'Adobe Suite',
 ];
 
-const BG_TEXT = Array(12).fill(
-  'JAVASCRIPT REACT NODE.JS GIT MYSQL REST MONGODB HTML5 CSS3 BOOTSTRAP HANDLEBARS ADOBE '
-).join('');
-
 export default function Skills() {
   return (
     <div className='skills' id='skills'>
-      <div className='bgText' aria-hidden='true'>{BG_TEXT}</div>
       <div className='content'>
         <h1>Skills</h1>
         <ul className='skillList'>

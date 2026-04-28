@@ -2,33 +2,11 @@
 
 .skills {
     background: white;
-    position: relative;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     padding: 60px 0;
-
-    .bgText {
-        position: absolute;
-        top: -200px;
-        left: -200px;
-        right: -200px;
-        bottom: -200px;
-        font-size: 100px;
-        font-weight: 900;
-        color: $mainColor;
-        opacity: 0.05;
-        letter-spacing: 0.06em;
-        line-height: 1.25;
-        transform: rotate(-12deg);
-        pointer-events: none;
-        user-select: none;
-        overflow: hidden;
-        word-break: break-all;
-        z-index: 0;
-    }
 
     .content {
         position: relative;

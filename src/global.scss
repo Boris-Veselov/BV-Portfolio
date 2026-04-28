@@ -1,3 +1,13 @@
+html, body {
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
 $mainColor: rgb(98, 162, 162);
 $accentColor: rgb(211, 48, 48);
 $bgLight: #ffffff;

@@ -64,7 +64,7 @@ export default function Portfolio() {
         {projects.map((p, i) => (
           <div
             key={p.id}
-            className={`card card-${i + 1}`}
+            className='card'
             onClick={() => setSelectedProject(p)}
           >
             <div className='cardAccent' style={{ background: p.gradient }} />

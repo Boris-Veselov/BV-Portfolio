@@ -41,21 +41,9 @@
         .aboutSection {
             h1 {
                 font-size: 28px;
+                font-weight: 700;
                 color: $accentColor;
-                margin-bottom: 24px;
-                position: relative;
-                display: inline-block;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -8px;
-                    left: 0;
-                    width: 32px;
-                    height: 3px;
-                    background: $mainColor;
-                    border-radius: 2px;
-                }
+                margin-bottom: 20px;
             }
 
             p {
@@ -67,12 +55,10 @@
 
         .skillsSection {
             h2 {
-                font-size: 14px;
+                font-size: 28px;
                 font-weight: 700;
-                color: $textPrimary;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                margin-bottom: 14px;
+                color: $accentColor;
+                margin-bottom: 20px;
             }
 
             .skillList {

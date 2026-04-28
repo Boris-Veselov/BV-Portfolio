@@ -10,22 +10,10 @@
 
     h1 {
         font-size: 28px;
+        font-weight: 700;
         color: $accentColor;
         flex-shrink: 0;
         margin-bottom: 20px;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 48px;
-            height: 3px;
-            background: $mainColor;
-            border-radius: 2px;
-        }
 
         @include mobile {
             font-size: 20px;

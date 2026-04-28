@@ -24,14 +24,5 @@
             height: calc(100vh - 70px);
             scroll-snap-align: start;
         }
-
-        .combinedSection {
-            height: auto;
-            > * {
-                width: 100%;
-                height: auto;
-                scroll-snap-align: unset;
-            }
-        }
     }
 }

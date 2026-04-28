@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <div className='contact' id='contact'>
       <div className='left'>
-        <img src='assets/shake.svg' alt='' />
+        <img src='assets/call.png' alt='' />
       </div>
       <div className='right'>
         <h2>Get In Touch</h2>

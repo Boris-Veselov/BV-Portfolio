@@ -10,7 +10,7 @@ export default function Skills() {
   return (
     <div className='skills' id='about'>
       <div className='imagePanel'>
-        <img src='assets/head.png' alt='Boris Veselov' />
+        <img src='assets/face.png' alt='Boris Veselov' />
       </div>
       <div className='rightPanel'>
         <div className='aboutSection'>

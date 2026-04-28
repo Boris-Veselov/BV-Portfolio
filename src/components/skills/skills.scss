@@ -3,98 +3,127 @@
 .skills {
     background: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
     height: auto;
-    padding: 60px 0;
 
-    .content {
-        position: relative;
-        z-index: 1;
-        display: flex;
+    @include mobile {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
     }
 
-    h1 {
-        font-size: 28px;
-        color: $accentColor;
-        margin-bottom: 36px;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 32px;
-            height: 3px;
-            background: $mainColor;
-            border-radius: 2px;
-        }
+    .imagePanel {
+        flex: 0 0 55%;
+        overflow: hidden;
 
         @include mobile {
-            font-size: 20px;
+            flex: none;
+            height: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
         }
     }
 
-    .skillList {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 36px;
+    .rightPanel {
+        flex: 1;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0;
-        width: 80%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 52px 44px 44px;
 
-        li {
-            font-size: 15px;
-            font-weight: 500;
-            color: $textPrimary;
-            letter-spacing: 0.02em;
-            cursor: default;
-            transition: color 0.2s ease;
-            padding: 0 16px;
-            white-space: nowrap;
+        @include mobile {
+            padding: 32px 24px;
+        }
 
-            &:not(:last-child)::after {
-                content: '·';
-                margin-left: 16px;
-                color: $mainColor;
+        .aboutSection {
+            h1 {
+                font-size: 28px;
+                color: $accentColor;
+                margin-bottom: 24px;
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -8px;
+                    left: 0;
+                    width: 32px;
+                    height: 3px;
+                    background: $mainColor;
+                    border-radius: 2px;
+                }
             }
 
-            &:hover {
-                color: $mainColor;
-            }
-
-            @include mobile {
-                font-size: 13px;
-                padding: 4px 10px;
+            p {
+                font-size: 15px;
+                color: $textMuted;
+                line-height: 1.8;
             }
         }
-    }
 
-    .resumeLink {
-        .btn-resume {
-            display: inline-block;
-            padding: 10px 28px;
-            color: $accentColor;
-            text-decoration: none;
-            background-color: transparent;
-            border: 2px solid $mainColor;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .skillsSection {
+            h2 {
+                font-size: 14px;
+                font-weight: 700;
+                color: $textPrimary;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+            }
 
-            &:hover {
-                background-color: $mainColor;
-                color: white;
-                transform: translateY(-2px);
+            .skillList {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 24px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0;
+
+                li {
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $textPrimary;
+                    padding: 3px 0;
+                    white-space: nowrap;
+                    cursor: default;
+                    transition: color 0.2s ease;
+                    padding-right: 14px;
+
+                    &:not(:last-child)::after {
+                        content: '·';
+                        margin-left: 14px;
+                        color: $mainColor;
+                    }
+
+                    &:hover {
+                        color: $mainColor;
+                    }
+                }
+            }
+
+            .resumeLink {
+                .btn-resume {
+                    display: inline-block;
+                    padding: 9px 24px;
+                    color: $accentColor;
+                    text-decoration: none;
+                    background-color: transparent;
+                    border: 2px solid $mainColor;
+                    border-radius: 10px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: $mainColor;
+                        color: white;
+                        transform: translateY(-2px);
+                    }
+                }
             }
         }
     }

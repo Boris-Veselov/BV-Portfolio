@@ -59,27 +59,35 @@ export default function Portfolio() {
 
   return (
     <div className='portfolio' id='portfolio'>
-      <h1>Projects</h1>
-      <div className='bentoGrid'>
-        {projects.map((p, i) => (
-          <div
-            key={p.id}
-            className='card'
-            onClick={() => setSelectedProject(p)}
-          >
-            <div className='cardAccent' style={{ background: p.gradient }} />
-            <div className='cardBody'>
-              <span className='cardNum'>0{i + 1}</span>
-              <h3>{p.title}</h3>
-              <p className='tagline'>{p.tagline}</p>
-              <div className='cardTags'>
-                {p.tags.slice(0, 2).map(tag => <span key={tag}>{tag}</span>)}
+      <div className='redLine' />
+      <div className='content'>
+        <div className='leftPanel'>
+          <h1>Projects</h1>
+          <div className='bentoGrid'>
+            {projects.map((p, i) => (
+              <div
+                key={p.id}
+                className={`card${i === 4 ? ' card--last' : ''}`}
+                onClick={() => setSelectedProject(p)}
+              >
+                <div className='cardAccent' style={{ background: p.gradient }} />
+                <div className='cardBody'>
+                  <span className='cardNum'>0{i + 1}</span>
+                  <h3>{p.title}</h3>
+                  <p className='tagline'>{p.tagline}</p>
+                  <div className='cardTags'>
+                    {p.tags.slice(0, 2).map(tag => <span key={tag}>{tag}</span>)}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className='rightPanel'>
+          <img src='assets/projects.png' alt='' />
+        </div>
       </div>
-      <img src='assets/projects.png' alt='' className='projectsImg' />
+      <div className='redLine' />
       {selectedProject && (
         <PortfolioModal item={selectedProject} onClose={() => setSelectedProject(null)} />
       )}

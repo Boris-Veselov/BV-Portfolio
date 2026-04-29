@@ -3,9 +3,30 @@
 .contact {
     background-color: white;
     display: flex;
+    flex-direction: column;
+    position: relative;
 
-    @include mobile {
-        flex-direction: column;
+    .redLine {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $accentColor;
+        z-index: 1;
+
+        &:first-child { top: 40px; }
+        &:last-child  { bottom: 50px; }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        min-height: 0;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     .left {
@@ -14,10 +35,21 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 40px 16px 40px 40px;
+        padding: 10px 16px 40px 40px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right,  white 0%, transparent 15%, transparent 75%, white 100%),
+                linear-gradient(to bottom, white 0%, transparent 20%, transparent 80%, white 100%);
+            pointer-events: none;
+        }
 
         img {
-            max-height: 70%;
+            max-height: 80%;
 
             @include mobile {
                 max-height: 120px;

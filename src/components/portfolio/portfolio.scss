@@ -4,105 +4,145 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 28px 0 28px;
-    height: auto;
+    position: relative;
 
-    h1 {
-        font-size: 28px;
-        font-weight: 700;
-        color: $accentColor;
-        flex-shrink: 0;
-        margin-bottom: 20px;
+    .redLine {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $accentColor;
+        z-index: 1;
 
-        @include mobile {
-            font-size: 20px;
-        }
+        &:first-child { top: 40px; }
+        &:last-child  { bottom: 70px; }
     }
 
-    .bentoGrid {
+    .content {
+        flex: 1;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        gap: 12px;
-        position: relative;
-        width: 90%;
-        flex-wrap: wrap;
+        min-height: 0;
+        padding: 50px 0;
+    }
 
-        .card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            width: 170px;
+    .leftPanel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px 0 40px;
+        overflow-y: auto;
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: $accentColor;
             flex-shrink: 0;
+            margin-bottom: 20px;
+        }
 
-            .cardAccent {
-                height: 4px;
-                flex-shrink: 0;
-            }
+        .bentoGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
 
-            .cardBody {
-                flex: 1;
-                padding: 14px 16px 12px;
+            .card {
+                background: white;
+                border-radius: 16px;
+                overflow: hidden;
+                cursor: pointer;
                 display: flex;
                 flex-direction: column;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+                border: 1px solid rgba(0, 0, 0, 0.04);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-                .cardNum {
-                    font-size: 10px;
-                    font-weight: 700;
-                    color: $textMuted;
-                    letter-spacing: 0.08em;
-                    margin-bottom: 6px;
+                &.card--last {
+                    grid-column: 1 / 2;
                 }
 
-                h3 {
-                    font-size: 14px;
-                    font-weight: 700;
-                    color: $textPrimary;
-                    margin-bottom: 6px;
+                .cardAccent {
+                    height: 4px;
+                    flex-shrink: 0;
                 }
 
-                .tagline {
-                    font-size: 11px;
-                    color: $textMuted;
-                    line-height: 1.5;
+                .cardBody {
                     flex: 1;
-                    margin-bottom: 12px;
-                }
-
-                .cardTags {
+                    padding: 14px 16px 12px;
                     display: flex;
-                    gap: 4px;
-                    flex-wrap: wrap;
+                    flex-direction: column;
 
-                    span {
-                        font-size: 9px;
-                        color: $mainColor;
-                        background: rgba(98, 162, 162, 0.1);
-                        padding: 2px 6px;
-                        border-radius: 5px;
-                        font-weight: 500;
+                    .cardNum {
+                        font-size: 10px;
+                        font-weight: 700;
+                        color: $textMuted;
+                        letter-spacing: 0.08em;
+                        margin-bottom: 6px;
+                    }
+
+                    h3 {
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: $textPrimary;
+                        margin-bottom: 6px;
+                    }
+
+                    .tagline {
+                        font-size: 11px;
+                        color: $textMuted;
+                        line-height: 1.5;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    }
+
+                    .cardTags {
+                        display: flex;
+                        gap: 4px;
+                        flex-wrap: wrap;
+
+                        span {
+                            font-size: 9px;
+                            color: $mainColor;
+                            background: rgba(98, 162, 162, 0.1);
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            font-weight: 500;
+                        }
                     }
                 }
-            }
 
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+                }
             }
         }
     }
 
-    .projectsImg {
-        margin-top: 20px;
-        max-width: 86%;
-        max-height: 220px;
-        object-fit: contain;
+    .rightPanel {
+        flex: 0 0 42%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 40px 0 16px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            margin-top: -10px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right,  white 0%, rgba(255,255,255,0.6) 20%, transparent 40%, transparent 55%, white 100%),
+                linear-gradient(to bottom, white 0%, transparent 40%, transparent 60%, white 100%);
+            pointer-events: none;
+        }
     }
 }

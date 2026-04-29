@@ -3,11 +3,31 @@
 .skills {
     background: white;
     display: flex;
-    flex-direction: row;
-    height: auto;
+    flex-direction: column;
+    position: relative;
 
-    @include mobile {
-        flex-direction: column;
+    .redLine {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $accentColor;
+        z-index: 1;
+
+        &:first-child { top: 40px; }
+        &:last-child  { bottom: 70px; }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        min-height: 0;
+        padding: 30px 0;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     .imagePanel {
@@ -17,6 +37,17 @@
         justify-content: center;
         padding: 40px;
         overflow: hidden;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right,  white 0%, transparent 25%, transparent 40%, rgba(255,255,255,0.6) 65%, white 100%),
+                linear-gradient(to bottom, white 0%, transparent 40%, transparent 60%, white 100%);
+            pointer-events: none;
+        }
 
         @include mobile {
             flex: none;
@@ -24,7 +55,7 @@
         }
 
         img {
-            max-height: 70%;
+            max-height: 90%;
             max-width: 100%;
             object-fit: contain;
         }
@@ -34,9 +65,9 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 32px;
-        padding: 52px 44px 44px;
+        padding: 130px 44px 44px;
 
         @include mobile {
             padding: 32px 24px;

@@ -14,9 +14,10 @@
         overflow-y: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        &::-webkit-scrollbar { display: none; }
+        &::-webkit-scrollbar-button { display: none; }
+        &::-webkit-scrollbar-track { display: none; }
+        &::-webkit-scrollbar-thumb { display: none; }
 
         > * {
             width: 100vw;

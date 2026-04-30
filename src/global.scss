@@ -8,13 +8,24 @@ html, body {
     }
 }
 
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.50;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+}
+
 $mainColor: rgb(98, 162, 162);
 $accentColor: rgb(211, 48, 48);
 $bgLight: #ffffff;
 $bgSection: #f5f5f5;
 $bgCard: #ffffff;
 $textPrimary: #333333;
-$textMuted: #888888;
+$textMuted: #585757;
 
 $width: 768px;
 

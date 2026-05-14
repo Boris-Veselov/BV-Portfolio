@@ -30,7 +30,7 @@ $textMuted: #585757;
 $width: 768px;
 
 @mixin mobile {
-    @media (max-width: #{$width}) {
+    @media (max-width: #{$width}), (max-height: 500px) and (orientation: landscape) {
         @content
     }
 }

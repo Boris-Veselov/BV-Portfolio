@@ -50,8 +50,7 @@
         }
 
         @include mobile {
-            flex: none;
-            padding: 24px;
+            display: none;
         }
 
         img {

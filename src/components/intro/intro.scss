@@ -8,6 +8,10 @@
     justify-content: space-between;
     padding: 28px 40px 24px;
 
+    @include mobile {
+        padding: 20px 24px 16px;
+    }
+
     .nameRow {
         align-self: center;
         text-align: center;
@@ -23,9 +27,13 @@
                 justify-content: center;
                 gap: 8px;
 
+                @include mobile { font-size: 30px; }
+
                 .checkIcon {
                     height: 32px;
                     flex-shrink: 0;
+
+                    @include mobile { height: 24px; }
                 }
             }
         }
@@ -37,6 +45,11 @@
         height: 3px;
         background-color: $accentColor;
         flex-shrink: 0;
+
+        @include mobile {
+            width: calc(100% + 48px);
+            margin: 0 -24px;
+        }
     }
 
     .imageSection {
@@ -67,6 +80,8 @@
         gap: 52px;
         padding: 12px 0 0;
 
+        @include mobile { gap: 28px; }
+
         a {
             display: flex;
             align-items: center;
@@ -78,10 +93,14 @@
             letter-spacing: 0.04em;
             transition: color 0.2s ease;
 
+            @include mobile { font-size: 14px; }
+
             .arrow {
                 font-size: 18px;
                 color: $mainColor;
                 transition: transform 0.2s ease;
+
+                @include mobile { font-size: 15px; }
             }
 
             &:hover {

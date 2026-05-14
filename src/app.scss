@@ -2,12 +2,14 @@
 
 .app {
     height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     background-color: $bgLight;
 
     .sections {
         width: calc(100vw + 20px);
         height: 100vh;
+        height: 100dvh;
         position: relative;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
@@ -22,6 +24,7 @@
         > * {
             width: 100vw;
             height: 100vh;
+            height: 100dvh;
             scroll-snap-align: start;
         }
     }

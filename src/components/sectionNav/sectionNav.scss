@@ -11,6 +11,8 @@
     z-index: 100;
     overflow: hidden;
 
+    @include mobile { display: none; }
+
     &::-webkit-scrollbar { display: none; }
     &::-webkit-scrollbar-button { display: none; }
     scrollbar-width: none;

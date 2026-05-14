@@ -38,6 +38,9 @@
         padding: 10px 16px 40px 40px;
         position: relative;
 
+        /* hide on mobile — avoids the huge blank gap caused by flex: 0 0 44% in column direction */
+        @include mobile { display: none; }
+
         &::after {
             content: '';
             position: absolute;
